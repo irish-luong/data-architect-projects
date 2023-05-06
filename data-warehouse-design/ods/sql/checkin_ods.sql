@@ -1,0 +1,23 @@
+---------------------- CHECKIN ----------------------
+SELECT * FROM UDACITYEXERCISE.STAGING.CHECKIN LIMIT 1;
+
+DROP TABLE IF EXISTS UDACITYEXERCISE.ODS.CHECKIN;
+
+CREATE TABLE IF NOT EXISTS UDACITYEXERCISE.ODS.CHECKIN(
+    business_id VARCHAR(255) REFERENCES UDACITYEXERCISE.ODS.BUSINESS(business_id),
+    date DATE,
+    timestamp TIMESTAMP
+    );
+
+INSERT INTO UDACITYEXERCISE.ODS.CHECKIN
+SELECT
+    TRIM(origin.json_value:business_id) AS business_id,
+    TRY_TO_DATE(TRIM(checkin.value)) AS date,
+    TRY_TO_TIMESTAMP(TRIM(checkin.value)) AS timestamp
+FROM 
+    UDACITYEXERCISE.STAGING.CHECKIN origin, 
+    LATERAL FLATTEN(input => SPLIT(json_value:date, ','), mode => 'array') checkin;
+
+
+
+SELECT * FROM UDACITYEXERCISE.ODS.CHECKIN LIMIT 10

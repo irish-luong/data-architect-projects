@@ -1,0 +1,8 @@
+"FILE_NAME","TABLE_NAME","ROW_PARSED","ROW_COUNT"
+"stages/fc4b9895-6cd4-4bc9-9e26-8f64ccf0bacb/yelp_academic_dataset_business.json.gz","BUSINESS","150346","150346"
+"stages/fc4b9895-6cd4-4bc9-9e26-8f64ccf0bacb/yelp_academic_dataset_checkin.json.gz","CHECKIN","131930","131930"
+"stages/fc4b9895-6cd4-4bc9-9e26-8f64ccf0bacb/yelp_academic_dataset_covid_features.json.gz","COVID","209795","209795"
+"stages/fc4b9895-6cd4-4bc9-9e26-8f64ccf0bacb/yelp_academic_dataset_user.json.gz","CUSTOMER","1987897","1987897"
+"stages/fc4b9895-6cd4-4bc9-9e26-8f64ccf0bacb/yelp_academic_dataset_review_000.json.gz","REVIEW","697596","697596"
+"stages/2cb6a4e7-48d5-4297-aeaa-c87ff7d245f1/usw00023169-temperature-degreef.csv.gz","TEMPERATURE","28241","28241"
+"stages/fc4b9895-6cd4-4bc9-9e26-8f64ccf0bacb/yelp_academic_dataset_tip.json.gz","TIPS","908915","908915"
